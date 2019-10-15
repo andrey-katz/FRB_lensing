@@ -1,13 +1,10 @@
-======================================================================
-   Searching for MACHOs using the Spectra of Fast Radio Bursts
-      Andrey Katz, Joachim Kopp, Sergey Sibiryakov, Wei Xue
-      arXiv:1910.XXXXX
-======================================================================
+Searching for MACHOs using FRB Spectra
+=======================================================================
+Andrey Katz, Joachim Kopp, Sergey Sibiryakov, Wei Xue
+arXiv:1910.XXXXX
 
 This repository contains the Python codes used in the above mentioned paper/
 
-
-----------------------------------------------------------------------
 Simulation code (frb.ipynb)
 ----------------------------------------------------------------------
 
@@ -20,12 +17,10 @@ Examples for how to use it are given in section "Results".
 
 Further information is given in the first section of the worksheet
 
-----------------------------------------------------------------------
 Analysis routines (directory data_analysis)
 ----------------------------------------------------------------------
 
 
-----------------------------------------------------------------------
 Licensing and citation information
 ----------------------------------------------------------------------
 
