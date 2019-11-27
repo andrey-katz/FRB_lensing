@@ -53,8 +53,6 @@ class units:
     H0      = h * 100. * km / sec/ Mpc       # Hubble parameter
     rho_c0  = 3. * H0**2/(8. * np.pi * GN)   # critical density today, Kolb Turner eq. (3.14)
     Omega_m = 0.14 / h**2                    # total matter density
-    Omega_vac = 1 - Omega_m
-    RH = 1/H0                                # Hubble radius 
     
     # particle physics
     alpha_em = (1./137.035999139)            # electromagnetic fine structure constant (PDG 2018)
@@ -77,25 +75,6 @@ from sklearn import linear_model
 from sklearn.pipeline import Pipeline 
 
 from scipy.fftpack import fft
-from scipy import integrate 
-from scipy.optimize import root_scalar
-
-def E(z):
-    u = units()
-    return np.sqrt(u.Omega_m * (1+z)**3 + u.Omega_vac)
-
-def comoving(z):
-    u = units()
-    f = lambda x: 1/E(x)
-    I = integrate.quad(f, 0, z)
-    return u.RH * I[0]
-
-angular = lambda z: comoving(z) / (1+z)
-
-def dist_to_z(dist):
-    u = units()
-    f = lambda x: angular(x)/u.Gpc - dist/u.Gpc
-    return root_scalar(f, x0 = 1., x1 = 0.).root 
 
 def autocorrelation(vec):
     return np.array([np.mean(np.conj(vec) * np.roll(vec, n))/(np.mean(vec)**2) for n in range(len(vec))])
@@ -158,8 +137,7 @@ round_to_2 = lambda x: round(x, 1-int(np.floor(np.log10(abs(x)))))
 
 def rE(M, DL, DS):
     u = units()
-    z = dist_to_z(DL)
-    return np.sqrt(4 * u.GN * M * DL * (1+z) * (DS - DL)/DS)
+    return np.sqrt(4 * u.GN * M * DL * (DS - DL)/DS)
 
 def lens_time_delay(M, DL, DS, y):
     xE = rE(M, DL, DS)
