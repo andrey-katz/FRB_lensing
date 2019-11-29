@@ -38,13 +38,13 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 Copyright (C) 2019
-Andrey Katz, Joachim Kopp, Sergey Sibiryakov, Wei Xue
+Andrey Katz, Joachim Kopp, Wei Xue
 Contact address: jkopp@cern.ch
 
 
 If you use these codes in a scientific publication, please cite the
 following reference:
 
-arXiv:1910.XXXXX
+arXiv:1912.XXXXX
 
 
