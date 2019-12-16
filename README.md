@@ -15,10 +15,11 @@ power).
 
 Examples for how to use it are given in section "Results".
 
-Further information is given in the first section of the worksheet
-
-Analysis routines (directory data_analysis)
+Further information is given on the event analysis is found in README.tex
+in the events analysis directory. 
 ----------------------------------------------------------------------
+
+
 
 
 Licensing and citation information
