@@ -1,7 +1,7 @@
 Searching for MACHOs using FRB Spectra
 =======================================================================
 Andrey Katz, Joachim Kopp, Sergey Sibiryakov, Wei Xue
-arXiv:1912.XXXXX
+arXiv:1912.07620
 
 This repository contains the Python codes used in the above mentioned paper/
 
